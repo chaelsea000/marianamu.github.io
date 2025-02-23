@@ -1,0 +1,34 @@
+extends layout_kor.pug 
+block variables 
+    -var menuType = 1
+
+block div
+    section.jumbotron.jumbotronBg1 
+        div.container
+            p.jumbotronLead Contact Us
+    section#content.container-fluid
+        div.clinichour
+            div.title
+                |진료시간
+            div.clinichourImg
+                img(src="./images/clinichour.png")
+        div(style="height:2rem;")
+        div.location
+            div.title
+                |위치안내
+            div.locationText
+                |서울특별시 노원구 화랑로 337 인현빌딩 303호 (석계역 1번출구 앞)
+            div.locationImg
+                img(src="./images/location.png")
+
+        style.
+            .clinichour, .location {padding-top: 4rem;}
+            .title {font-size: 4rem; font-weight: 800; color: #333; text-align: left; margin:0;}
+
+            .clinichourImg {display: flex; margin-top: 4.4rem;}
+            .clinichourImg img {max-width: 780px; width: 100%;}
+            /*.clinichourText {margin-top: 0.8rem; display: block; font-size: 1.8rem; font-weight: 300; line-height: 125%; color: #6e6e73;}*/
+
+            .locationText {margin-top: 1.4rem; font-size: 1.8rem; font-weight: 300; line-height: 125%; color :#6e6e73;}
+            .locationImg {display: flex; margin-top: 4.4rem; margin-bottom: 6rem;}
+            .locationImg img {max-width: 1020px; width: 100%; border-radius: 25px;}

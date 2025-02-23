@@ -1,0 +1,75 @@
+extends layout_kor.pug 
+block variables 
+    -var menuType = 1
+
+block div
+    section.jumbotron.jumbotronBg1 
+        div.container
+            p.jumbotronLead 진료안내
+    section#content.container-fluid
+        div.npbase
+            h4.title 진료과목
+            p.detail 정신건강의학과는 인간의 정신적, 심리적 건강을 종합적으로 다루는 전문 진료 분야로, 개인의 생각, 감정, 행동, 인지 기능에 영향을 미치는 다양한 정신 건강 문제를 진단하고 치료합니다. 저희 성모나무 정신건강의학과는 과학적 근거에 기반한 최신 치료법을 통해 환자 개개인의 필요에 맞춘 맞춤형 치료를 제공합니다.
+            div.npbaseContent
+                ul
+                    li
+                        span 01
+                        h5 우울증 치료
+                        p 
+                            |우울증은 일상생활에 큰 영향을 미칠 수 있는 정신 건강 문제입니다. 성모나무에서는 개인 맞춤형 상담과 약물 치료를 통해 우울증의 증상을 완화하고 삶의 질을 향상시키는 데 도움을 드립니다.
+                    li
+                        span 02
+                        h5 불안장애 관리
+                        p
+                            |불안장애는 다양한 형태로 나타날 수 있으며, 일상적인 활동을 방해할 수 있습니다. 인지행동치료(CBT)와 같은 효과적인 치료법을 통해 불안 증상을 관리하고 극복하는 방법을 제공합니다.
+                    li
+                        span 03
+                        h5 스트레스 및 번아웃 관리
+                        p 
+                            |현대 사회에서 스트레스와 번아웃은 흔한 문제입니다. 저희 클리닉에서는 스트레스 관리 기법과 심리 상담을 통해 건강한 생활 방식을 유지할 수 있도록 지원합니다.
+                    li
+                        span 04
+                        h5 수면 장애 치료
+                        p 
+                            |불면증을 비롯한 다양한 수면 장애는 신체적, 정신적 건강에 큰 영향을 미칩니다. 수면 패턴 분석과 치료 계획을 통해 건강한 수면을 취할 수 있도록 도와드립니다.
+                    li
+                        span 05
+                        h5 ADHD 진단 및 치료
+                        p 
+                            |ADHD는 어린이뿐만 아니라 성인에게도 영향을 미칠 수 있습니다. 정확한 진단과 함께 행동 요법 및 약물 치료를 통해 증상을 효과적으로 관리합니다.
+                    li
+                        span 06
+                        h5 중독 치료
+                        p
+                            |알코올, 약물, 게임 등 다양한 중독 문제를 다룹니다. 개인 맞춤형 치료 프로그램을 통해 중독에서 벗어나 건강한 삶을 되찾도록 돕습니다.
+                    li
+                        span 07
+                        h5 정신분열증 및 
+                            br
+                            |기타 정신병적 장애 치료
+                        p 
+                            |정신분열증과 같은 심각한 정신병적 장애에 대한 전문적인 평가와 치료를 제공합니다. 약물 치료와 심리 사회적 지원을 통해 환자와 가족이 함께 회복할 수 있도록 돕습니다.
+                    
+    style.
+        .npbase {padding:4rem 0; padding-bottom:8rem;}
+        .title {font-weight: 800; margin-bottom: 2.2rem; text-align: left;}
+        .detail {font-size: 2.1rem; font-weight: 400; color: #1d1d1f; font-family: "Nanum Square Round"; margin-bottom: 3.4rem;}
+        
+        .npbaseContent {display: flex; justify-content: space-between; align-items: center; flex-direction: column;}
+        .npbaseContent ul {}
+        .npbaseContent ul li {display: flex; align-items: top; padding:1.8rem 0; font-size: 2.1rem; word-break: keep-all; border-top: 1px solid #999;}
+        .npbaseContent ul li:last-child {border-bottom: 1px solid #999;}
+        .npbaseContent ul li span {font-size: 2.4rem; font-weight: 500; color: #d69d44; margin-right:2rem;}
+        .npbaseContent ul li h5 {width:35rem; margin:0.4rem 2.8rem 0 0; font-size: 2.4rem; font-weight: 500; color: #6e6e73; white-space: nowrap;}
+        .npbaseContent ul li p {margin:0; padding:0; width: calc(100% - 20rem); font-size: 2.2rem;}
+       
+       @media (max-width: 1199.98px) {
+            .npbaseContent {display: flex; flex-direction: column;}
+            .npbaseContent img {margin:0; margin-bottom: 4rem; border-radius: 25px; width: 100%; height: 38rem; object-position: top 20% right 0;}
+            .npbaseContent ul li h5 {color: #333;}
+
+        }
+        @media (max-width: 991.98px) {
+            .npbaseContent ul li {flex-wrap: wrap;}
+            .npbaseContent ul li p {width: 100%; margin-top: 0.8rem;}
+        }

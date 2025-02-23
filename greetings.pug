@@ -1,0 +1,76 @@
+extends layout_kor.pug 
+block variables 
+    -var menuType = 1
+
+block div
+    section.jumbotron.jumbotronBg1 
+        div.container
+            p.jumbotronLead 성모나무 소개
+    section#content.container-fluid
+        div.greetings
+            p.greetingsIntro 
+                |지역과 함께 뿌리내린 나무처럼, 
+                br
+                |마음을 치유하는 성모나무 정신건강의학과입니다
+            p.greetingsContent
+                |안녕하세요,
+                br
+                |성모나무 정신건강의학과의원 원장 김한석입니다.
+                br
+                |설레는 마음으로 정식으로 인사드립니다.
+                br
+                |저는 장위동에서 태어나 초중고를 이 지역에서 다녔는데요,
+                br
+                |나고 자란 동네에서 다시 지역주민분들과 소통하고 뿌리를 내리려 하니 감회가 남다릅니다. 
+                br
+                |모든 우리네 삶은 '나무'의 삶과 같다고 생각합니다.
+                br
+                |선선한 가을 바람에 몸을 맡기는 날도 있고 또 어떤 날은 장맛비에 고군분투하기도 하지만,
+                br
+                |결국엔 결실을 맺어내는 대견한 나무이지요.  
+                br
+                |저 역시 한 그루의 나무이자, 나무를 지키는 파수꾼입니다. 
+                br
+                |나무 곁에서 묵묵히 있어주는 그런 파수꾼. 
+                br
+                |장마에 부러진 가지를 가지치기를 해주기도하고, 모진 풍파를 잘 견디도록 옆에서 함께 합니다.
+                br
+                |이런 마음을 담아 '성모나무 정신건강의학과의원'을 시작하오니, 
+                br
+                |오시는 모든 분들이 편히 쉬어가실 수 있는 그런 곳이 되길 소원합니다.  
+                br
+                |감사합니다.
+                img.greetingsImage(src="../images/greetingsImage1.png")
+            div.greetingsName
+                span 대표원장
+                img(src="../images/greetingsName.png")
+    style.
+        @font-face {
+            font-family: "SDMiSaeng";
+            src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/Misaengfont/SDMiSaeng.woff") format("woff");
+            font-weight: normal;
+              font-style: normal;
+        }
+
+        #content.container-fluid {max-width: 1080px; padding: 4rem 0;}
+        .greetingsIntro {font-family: 'SDMisaeng'; display: inline-block; padding-left: 4rem; padding-top: 2rem; padding-bottom: 4rem; font-size: 3.8rem; line-height: 100%; font-weight: 600; position: relative; color:#333;}
+        .greetingsIntro::before {content: "\f10d"; position: absolute; top: 0; left: 0; font-size: 2rem; font-family: "Font Awesome 5 Free";}
+        .greetingsIntro::after {content: "\f10e"; position: absolute; bottom: 2rem; left: calc( 100% + 2rem); font-size: 2rem; font-family: "Font Awesome 5 Free";}
+        
+        .greetingsContent {display: flex; align-items: flex-end; font-size: 1.8rem; line-height: 160%;}
+        .greetingsImage {width: 280px; height: auto; margin-left: 2rem;}
+        .greetingsName {display: flex; padding-top: 1.2rem; padding-right: 6rem; justify-content: right; align-items: center; font-size:2rem; font-weight: 600;}
+        .greetingsName span {margin-right: 2rem;}
+        .greetingsName img {width: 80px;}
+
+        @media (max-width: 1199.98px) {
+            .greetings {display: flex; flex-direction: column; align-items: center;}
+            .greetingsContent {flex-direction: column; align-items: center; padding:0 2rem;}
+            .greetingsImage {width: 220px;}
+        }
+        
+        @media (max-width: 991.98px) {
+            .greetingsIntro {font-size: 3.2rem;}
+            .greetingsImage {width: 180px; margin-top: 2.2rem;}
+            .greetingsName img{width:60px;}
+        }

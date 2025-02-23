@@ -1,0 +1,110 @@
+extends layout_kor.pug 
+block variables
+    - var menuType = 1
+
+block div
+    section.jumbotron.jumbotronBg1
+        div.container
+            p.jumbotronLead 진료안내
+    section#content.container-fluid
+        div.payguide
+            h4.title 비급여안내
+            div.payguideTable
+                //-table
+                    thead
+                        tr
+                            th 코드
+                            th 명칭
+                            th 구분
+                            th 비용
+                    tbody
+                        tr
+                            td PDZ010000
+                            td 일반진단서
+                            td 20,000
+                        tr
+                            td PDZ010002
+                            td 근로능력평가용진단서
+                            td 10,000
+                        tr
+                            td PDZ080000
+                            td 병무용진단서
+                            td 20,000
+                        tr
+                            td PDZ090004
+                            td 통원확인서
+                            td 3,000
+                        tr
+                            td PDZ090007
+                            td 진료확인서
+                            td 3,000
+                        tr
+                            td PDE010001
+                            td 진료기록사본(1~5매)
+                            td 1,000
+                        tr
+                            td PDZ110102
+                            td 진료기록사본(6매 이상)
+                            td 100
+                        tr
+                            td PDZ070001
+                            td 장애정도 심사용 진단서(정신적장애)
+                            td 40,000
+                        tr
+                            td PDZ100000
+                            td 국민연금 장애심사용진단서
+                            td 15,000
+                        tr
+                            td PDZ170000
+                            td 장애인증명서
+                            td 1,000
+                        tr
+                            td PDZ160000
+                            td 제증명서 사본
+                            td 1,000
+                //-table
+                    thead
+                        tr
+                            th 분류
+                            th 코드
+                            th 명칭
+                            th 비용 (원)
+                    tbody
+                        tr
+                            td(data-label="분류") 신경계기능검사
+                            td FZ869
+                            td 주의력검사
+                            td 100,000
+                        tr
+                            td(data-label="분류") 증상 및 행동평가검사
+                            td FY701
+                            td 신경증후군평가
+                            td 90,000
+                        tr
+                            td(data-label="분류") 증상 및 행동평가검사
+                            td FY702
+                            td 불안평가척도
+                            td 90,000
+                        tr
+                            td(data-label="분류") 자폐스펙트럼 이상검사
+                            td FY734
+                            td 심박변이도검사
+                            td 200,000
+                        tr
+                            td(data-label="분류") 행동평가검사
+                            td FY739
+                            td 한국판/성격평가척도(KPAI)
+                            td 70,000
+            
+            p.payguideImg
+                img(src="./images/payguide.png")
+    style. 
+        .payguide {padding:4rem 0;}
+        .title {font-weight: 800; margin-bottom: 2.2rem; text-align: left;}
+        .payguideImg {display:flex; justify-content: center; margin-bottom: 4rem;}
+        .payguideImg img {width: 100%; max-width: 800px;}
+        
+        @media (max-width: 1199.98px) {
+        }
+        @media (max-width: 991.98px) {
+        }
