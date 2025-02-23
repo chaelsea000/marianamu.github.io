@@ -8,10 +8,16 @@ block div
             p.jumbotronLead 성모나무 소개
     section#content.container-fluid
         div.greetings
-            p.greetingsIntro 
+            p.greetingsIntro.onlyPc
                 |지역과 함께 뿌리내린 나무처럼, 
                 br
                 |마음을 치유하는 성모나무 정신건강의학과입니다
+            p.greetingsIntro.onlyMobile
+                |지역과 함께 뿌리내린 나무처럼, 
+                br
+                |마음을 치유하는 성모나무
+                br
+                |정신건강의학과입니다
             p.greetingsContent
                 |안녕하세요,
                 br
@@ -53,15 +59,17 @@ block div
         }
 
         #content.container-fluid {max-width: 1080px; padding: 4rem 0;}
-        .greetingsIntro {font-family: 'SDMisaeng'; display: inline-block; padding-left: 4rem; padding-top: 2rem; padding-bottom: 4rem; font-size: 3.8rem; line-height: 100%; font-weight: 600; position: relative; color:#333;}
+        .greetingsIntro {font-family: 'SDMisaeng'; display: inline-block; padding: 2rem 4rem 4rem 4rem; font-size: 3.8rem; line-height: 100%; font-weight: 600; position: relative; color:#333;}
         .greetingsIntro::before {content: "\f10d"; position: absolute; top: 0; left: 0; font-size: 2rem; font-family: "Font Awesome 5 Free";}
-        .greetingsIntro::after {content: "\f10e"; position: absolute; bottom: 2rem; left: calc( 100% + 2rem); font-size: 2rem; font-family: "Font Awesome 5 Free";}
+        .greetingsIntro::after {content: "\f10e"; position: absolute; bottom: 2rem; left: calc( 100% - 2rem); font-size: 2rem; font-family: "Font Awesome 5 Free";}
         
         .greetingsContent {display: flex; align-items: flex-end; font-size: 1.8rem; line-height: 160%;}
         .greetingsImage {width: 280px; height: auto; margin-left: 2rem;}
         .greetingsName {display: flex; padding-top: 1.2rem; padding-right: 6rem; justify-content: right; align-items: center; font-size:2rem; font-weight: 600;}
         .greetingsName span {margin-right: 2rem;}
         .greetingsName img {width: 80px;}
+
+        .onlyMobile {display: none;}
 
         @media (max-width: 1199.98px) {
             .greetings {display: flex; flex-direction: column; align-items: center;}
@@ -70,7 +78,11 @@ block div
         }
         
         @media (max-width: 991.98px) {
-            .greetingsIntro {font-size: 3.2rem;}
+            .onlyMobile {display: inline-block;}
+            .onlyPc {display: none;}
+
+            .greetingsIntro {font-size: 3.2rem; padding: 2rem 3rem 3rem 3rem;}
+            .greetingsIntro::before, .greetingsIntro::after {font-size: 1.5rem;}
             .greetingsImage {width: 180px; margin-top: 2.2rem;}
             .greetingsName img{width:60px;}
         }
